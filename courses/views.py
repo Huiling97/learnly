@@ -17,9 +17,9 @@ class CourseViewSet(viewsets.ModelViewSet):
     serializer = CourseSerializer(queryset, many=True)
     return Response(serializer.data)
 
-    @action(detail=True, methods=['get'])
-    def lessons(self, request, pk=None):
-      course = self.get_object()
-      lessons = course.lessons.all()
-      serializer = LessonSerializer(lessons, many=True)
-      return Response(serializer.data)
+  @action(detail=True, methods=['get'])
+  def lessons(self, request, pk=None):
+    course = self.get_object()
+    lessons = course.lessons.all()
+    serializer = LessonSerializer(lessons, many=True)
+    return Response(serializer.data)

@@ -11,12 +11,7 @@ export const getColumns = () => [
   },
   {
     title: 'Instructor',
-    dataIndex: 'instructor',
-    key: 'instructor',
-  },
-  {
-    title: 'Created At',
-    dataIndex: 'created_at',
-    key: 'created_at',
+    dataIndex: 'instructor_name',
+    key: 'instructor_name',
   },
 ];
